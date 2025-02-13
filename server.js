@@ -61,7 +61,7 @@ if (!fs.existsSync(certPath)) {
 }
 
 if (!fs.existsSync(keyFile) || !fs.existsSync(certFile)) {
-    execSync(
+    exec(
         `openssl req -x509 -newkey rsa:2048 -keyout ${keyFile} -out ${certFile} -days 365 -nodes -subj "/CN=localhost"`,
         { stdio: 'inherit' } // Show output in console
     );

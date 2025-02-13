@@ -57,9 +57,13 @@ const keyFile = `${certPath}/key.pem`;
 const certFile = `${certPath}/cert.pem`;
 
 if (!fs.existsSync(certPath)) {
-    fs.mkdirSync(certPath);
+    fs.mkdirSync(certPath, { recursive: true }); // Ensure the directory exists
+}
+
+if (!fs.existsSync(keyFile) || !fs.existsSync(certFile)) {
     execSync(
-        `openssl req -x509 -newkey rsa:2048 -keyout ${keyFile} -out ${certFile} -days 365 -nodes -subj "/CN=localhost"`
+        `openssl req -x509 -newkey rsa:2048 -keyout ${keyFile} -out ${certFile} -days 365 -nodes -subj "/CN=localhost"`,
+        { stdio: 'inherit' } // Show output in console
     );
 }
 

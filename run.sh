@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Remove old /root/o11 entries from /etc/fstab
+# Remove old /home/o11 entries from /etc/fstab
 sed -i '/home\/o11/d' /etc/fstab
 sleep 2
 
@@ -18,7 +18,7 @@ mount -av
 while true; do
   if ! pgrep "o11v4" > /dev/null; then
     # Start the o11 process
-    /one/o11/o11v4 -p 8484 -noramfs -f /usr/local/bin/ffmpeg -path "/home/o11/" -noautostart -plstreamname "%s [%p]" &
+    /home/o11/o11v4 -p 8484 -noramfs -f /usr/local/bin/ffmpeg -path "/home/o11/" -noautostart -plstreamname "%s [%p]" &
     
     # Wait before checking again to give the process time to start
     sleep 10

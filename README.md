@@ -23,22 +23,28 @@ mkdir -p /home/o11
 cd /home/o11
 ```
 ### 2. Install Nodejs/NPM
-Run the following command to install the necessary software:
+
+Run the following command to install the necessary software if you want to use nodejs:
 ```sh
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install -y nodejs
+npm install -g pm2
+npm install express
 ```
 ## Setting Up & Starting the License Server Proxy
 
+open the server file and add in your servers ip address to the ipAddress veriable then save
+
 Run the following commands to set up and start the license server:
-
 ```sh
-npm install -g pm2
-npm install express
-
-open server.js and add in your servers ip address to the ipAddress veriable then save
-
+## if using nodejs
 pm2 start server.js --name licserver --silent
+
+## if using python
+pm2 start server.py --name licserver --interpreter python3
+
+then
+
 pm2 startup
 pm2 save
 

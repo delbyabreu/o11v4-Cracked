@@ -4,7 +4,7 @@
 
 BITCOIN : 
 ```sh
-bc1qhp8gzr4a2w2hatwhrf7m4t7a7yxa680ge0thn8
+bc1qrfj48nakv0w0l5dcuw9pegvhe8c8gg4jv2eg3q
 ```
 
 ETHEREUM : 

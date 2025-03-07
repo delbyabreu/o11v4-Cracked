@@ -9,7 +9,7 @@ bc1qrfj48nakv0w0l5dcuw9pegvhe8c8gg4jv2eg3q
 
 ETHEREUM : 
 ```sh
-0x1dBbF9F198240825BE119126AbA1b8D5082b7196
+0xafFe735Cbc40cE323c635Ab1dcCDa0a9655a7A28
 ```
 
 Tested on **Ubuntu 20-23**

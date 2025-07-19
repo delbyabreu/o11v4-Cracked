@@ -1,41 +1,29 @@
-# o11v4 - Cracked by Random-Code-Guy
+# o11v4 - Cracked
 
-## SUPPORT FUTURE WORKS
+Probado en **Ubuntu 20-23**
 
-BITCOIN : 
-```sh
-bc1qrfj48nakv0w0l5dcuw9pegvhe8c8gg4jv2eg3q
-```
+## Prerrequisitos
 
-ETHEREUM : 
-```sh
-0xafFe735Cbc40cE323c635Ab1dcCDa0a9655a7A28
-```
-
-Tested on **Ubuntu 20-23**
-
-## Prerequisites
-
-### 1. Create the Required Directory
-Run the following command to create the necessary directory:
+### 1. Crear el directorio requerido
+Ejecute el siguiente comando para crear el directorio necesario:
 ```sh
 mkdir -p /home/o11
 cd /home/o11
 ```
-### 2. Install Nodejs/NPM
+### 2. Instalar Nodejs/NPM
 
-Run the following command to install the necessary software if you want to use nodejs:
+Ejecute el siguiente comando para instalar el software necesario si desea utilizar nodejs:
 ```sh
 curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt install -y nodejs
 npm install -g pm2
 npm install express
 ```
-## Setting Up & Starting the License Server Proxy
+## Configuración e inicio del proxy del servidor de licencias
 
-open the server file and add in your servers ip address to the ipAddress veriable then save
+Abra el archivo del servidor y agregue la dirección IP de su servidor a la variable ipAddress, luego guarde
 
-Run the following commands to set up and start the license server:
+Ejecute los siguientes comandos para configurar e iniciar el servidor de licencias:
 ```sh
 ## if using nodejs
 pm2 start server.js --name licserver --silent
